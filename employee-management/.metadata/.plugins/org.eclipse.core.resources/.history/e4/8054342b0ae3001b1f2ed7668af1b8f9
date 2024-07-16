@@ -1,0 +1,5 @@
+package com.employee.system.Entity;
+
+public class Department {
+
+}

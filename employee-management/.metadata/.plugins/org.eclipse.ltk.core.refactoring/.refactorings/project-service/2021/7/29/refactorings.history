@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.employee.system.Service1Application&apos; to &apos;ProjectServiceApplication&apos;&#x0D;&#x0A;- Original project: &apos;project-service&apos;&#x0D;&#x0A;- Original element: &apos;com.employee.system.Service1Application&apos;&#x0D;&#x0A;- Renamed element: &apos;com.employee.system.ProjectServiceApplication&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Service1Application&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.employee.system{Service1Application.java[Service1Application" matchStrategy="1" name="ProjectServiceApplication" qualified="false" references="true" similarDeclarations="false" stamp="1626147444213" textual="false" version="1.0"/>
+</session>

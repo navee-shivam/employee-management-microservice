@@ -1,0 +1,5 @@
+package com.employee.system.configuration;
+
+public class RibbonConfiguration {
+
+}

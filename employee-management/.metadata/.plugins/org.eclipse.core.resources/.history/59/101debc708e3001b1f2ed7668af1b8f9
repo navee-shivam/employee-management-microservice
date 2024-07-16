@@ -1,0 +1,13 @@
+package com.employee.system.api;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.employee.system.entity.Employee;
+
+@RestController
+public class EmployeeInfoController {
+	
+public Employee getEmployee() {
+	return new Employee(1,"Mano","Developer");
+}
+}

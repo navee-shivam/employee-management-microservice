@@ -1,0 +1,30 @@
+package com.employee.system.api;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.employee.system.client.EmployeeClient;
+import com.employee.system.entity.Department;
+import com.employee.system.entity.Employee;
+
+@RestController
+public class EmployeeInfoController {
+	@Autowired
+	EmployeeClient employeeClient;
+
+	@GetMapping("/getEmployee")
+	public Employee getEmployee() {
+		Department department = employeeClient.getDepartment().getBody();
+		return new Employee(1, "Mano", department.getDepartment());
+	}
+
+	@LoadBalanced
+	@Bean
+	RestTemplate template() {
+		return new RestTemplate();
+	}
+}

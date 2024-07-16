@@ -1,0 +1,8 @@
+package com.employee.system.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="employee-department-service")
+public interface EmployeeClient {
+
+}

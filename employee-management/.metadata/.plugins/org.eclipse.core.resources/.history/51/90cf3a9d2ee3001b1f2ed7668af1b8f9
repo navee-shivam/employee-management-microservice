@@ -1,0 +1,17 @@
+package com.employee.system.client;
+
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.employee.system.entity.Department;
+
+@FeignClient(name = "employee-department-service")
+@RibbonClient(name="employee-department-service")
+public interface EmployeeClient {
+
+	@GetMapping("/getDepartment")
+	public ResponseEntity<Department> getDepartment();
+
+}
